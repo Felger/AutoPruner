@@ -1,11 +1,15 @@
+#!/usr/bin/perl
 use strict;
 use warnings;
+use 5.010;
+use autodie;
 use Cwd;
+use FindBin qw($Bin);       # $Bin is where our executable is
+use File::Spec;
 
-my $argnum = $#ARGV +1;
-if ($argnum !=2) {
-    print "\nTo prune  : Filetinker.pl -prune prunelist\n";
-    print "\nTo unprune: Filetinker.pl -unprune prunelist\n";
+if (@ARGV !=2) {
+    say "\nTo prune  : $0 -prune prunelist";
+    say "To unprune: $0 -unprune prunelist\n";
 }
 else
 {
@@ -13,20 +17,17 @@ else
     my $prunelist = $ARGV[1];
     my $BaseDir = 'GameData';
     
-    #Start with the current directory, and get our starting point.  We'll want to
-    #drop into ExampleData and scan there.
-    my $dir = getcwd;
-    #Move up a directory, then Move to GameData to start scanning and pruning.
-    $dir =~ s/\/([^\/])*$/\//;
-    $dir = $dir.$BaseDir;
-    open(PRUNELIST,$prunelist) or die "Couldn't open prunelist\n";
+    # Assuming we're always in the Pruner/ directory in the KSP directory, figure
+    # out where GameData will be.
+    my $dir = File::Spec->catdir($Bin,"..",$BaseDir);
+
+    open(my $prune_fh, '<', "$Bin/$prunelist");
     my @prunearray;
-    while (<PRUNELIST>) {
-      my $row = $_;
+    while (my $row = <$prune_fh>) {
       chomp $row;
       push (@prunearray,$row);
     }
-    close PRUNELIST;
+    close $prune_fh;
     my $key;
     
     print "==================================================\n";
@@ -38,9 +39,13 @@ else
     {
         print "Unpruning files defined in $prunelist:\n";
     }
+    else
+    {
+        die "Usage: $0 [-prune|--unprune] prunelist\n";
+    }
     print join("\n",@prunearray);
     print "\n\n\tProceed?\n\n\t   [ Y / N ]?";
-    chomp($key = <STDIN>);
+    chomp($key = <STDIN>);  ## no critic 'ProhibitExplicitStdin'
     
     if ($key eq 'y' || $key eq 'Y')
     {
@@ -58,20 +63,7 @@ else
 sub process_files {
     my ($path, $BaseDir, $action, @prunearray) = @_;
 
-    # Open the directory.
-    opendir (DIR, $path)
-        or die "Unable to open $path: $!";
-
-    # Read in the files and remove . and ..
-    my @contains = grep { !/^\.{1,2}$/ } readdir (DIR);
-
-    # Close the directory.
-    closedir (DIR);
-
-    # Put the whole path in the array entry.
-    @contains = map { $path . '/' . $_ } @contains;
-    
-    for (@contains)
+    for (glob("\Q$path\E/*"))
     {
         # If the file is a directory
         if (-d $_)
@@ -147,4 +139,6 @@ sub process_files {
             }
         }
     }
+
+    return;
 }
