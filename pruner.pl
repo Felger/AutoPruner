@@ -71,39 +71,6 @@ sub process_files {
             # Descend into the directories contained.  Do this before we screw
             # with filenames.
             process_files ($_,$BaseDir,$action,@prunearray);
-            
-			# Commented directory rename, don't want to conflict with other mods.
-            # Rename the directory if it matches a pruned directory.
-            # my $dir = $_;
-            # if ($action eq '-prune')
-            # {
-                # foreach (@prunearray)
-                # {
-                    # #Check for each defined pruning action, if we need to prune
-                    # if ($dir =~ /$_/ && !($dir =~ /-pruned/))
-                    # {
-                        # #Add -pruned to the directory name
-                        # rename $dir,$dir."-pruned";
-                        # $dir =~ s/^.*$BaseDir//;
-                        # print $dir."-pruned\n";
-                    # }
-                # }
-            # }
-            # elsif ($action eq '-unprune')
-            # {
-                # foreach (@prunearray)
-                # {
-                    # if ($dir =~ /$_/)
-                    # {
-                        # #remove -pruned from the directory name
-                        # my $unprunedir = $dir;
-                        # $unprunedir =~ s/-pruned//;
-                        # rename $dir,$unprunedir;
-                        # $unprunedir =~ s/^.*$BaseDir//;
-                        # print $unprunedir;
-                    # }
-                # }
-            # }
         }
         else
         { 
