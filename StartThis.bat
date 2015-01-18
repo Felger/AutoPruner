@@ -1,2 +1,3 @@
 @ECHO OFF
+cd PRNLs
 CMD
