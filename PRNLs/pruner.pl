@@ -35,16 +35,16 @@ sub main {
     }
     elsif (@args ==3 && $args[0] ne '-force')
     {
-		say "\nTo prune           : $0 [-force] -prune prunelist";
+	say "\nTo prune           : $0 [-force] -prune prunelist";
         say "To unprune         : $0 [-force] -unprune prunelist";
         say "To view prunelists : $0 -list\n";
         return EXIT_BADOPT;
-	}
+    }
     if ($args[0] eq '-force')
-	{
-		shift(@args);
-		$force = 1;
-	}
+    {
+        shift(@args);
+        $force = 1;
+    }
     my $action = $args[0];
     my $prunelist = $args[1];
     my $BaseDir = 'GameData';
@@ -96,12 +96,12 @@ sub main {
     }
     print join("\n",@prunearray);
     my $key = 'N';
-	printf "\n\n\tProceed (up to %d files to rename)", scalar @files;
+    printf "\n\n\tProceed (up to %d files to rename)", scalar @files;
     if (!$force) 
     {
-		print "?\n\n\t   [ Y / N ]?";
-		chomp($key = <STDIN>);  ## no critic 'ProhibitExplicitStdin'
-	} 
+        print "?\n\n\t   [ Y / N ]?";
+        chomp($key = <STDIN>);  ## no critic 'ProhibitExplicitStdin'
+    } 
     if ($key eq 'y' || $key eq 'Y' || $force)
     {
         print "\n-----Executing-----\n\n";
