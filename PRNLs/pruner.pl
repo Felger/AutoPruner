@@ -18,20 +18,32 @@ exit main(@ARGV);
 
 sub main {
     my @args = @_;
-
-    if (@args !=2 && @args !=1) 
+    my $force = 0;
+    if (@args !=3 && @args !=2 && @args !=1) 
     {
-        say "\nTo prune           : $0 -prune prunelist";
-        say "To unprune         : $0 -unprune prunelist";
+        say "\nTo prune           : $0 [-force] -prune prunelist";
+        say "To unprune         : $0 [-force] -unprune prunelist";
         say "To view prunelists : $0 -list\n";
         return EXIT_BADOPT;
     }
     elsif (@args ==1 && $args[0] ne '-list')
     {
-        say "\nTo prune         : $0 -prune prunelist";
-        say "To unprune         : $0 -unprune prunelist\n";
+        say "\nTo prune         : $0 [-force] -prune prunelist";
+        say "To unprune         : $0 [-force] -unprune prunelist\n";
         say "To view prunelists : $0 -list\n";
         return EXIT_BADOPT;
+    }
+    elsif (@args ==3 && $args[0] ne '-force')
+    {
+	say "\nTo prune           : $0 [-force] -prune prunelist";
+        say "To unprune         : $0 [-force] -unprune prunelist";
+        say "To view prunelists : $0 -list\n";
+        return EXIT_BADOPT;
+    }
+    if ($args[0] eq '-force')
+    {
+        shift(@args);
+        $force = 1;
     }
     my $action = $args[0];
     my $prunelist = $args[1];
@@ -80,15 +92,19 @@ sub main {
     }
     else
     {
-        die "Usage: $0 [-prune|-unprune] prunelist | -list\n";
+        die "Usage: $0 [-force] [-prune|-unprune] prunelist | -list\n";
     }
     print join("\n",@prunearray);
-    printf "\n\n\tProceed (up to %d files to rename)?\n\n\t   [ Y / N ]?", scalar @files;
-    chomp(my $key = <STDIN>);  ## no critic 'ProhibitExplicitStdin'
-    
-    if ($key eq 'y' || $key eq 'Y')
+    my $key = 'N';
+    printf "\n\n\tProceed (up to %d files to rename)", scalar @files;
+    if (!$force) 
     {
-        print "-----Executing-----\n\n";
+        print "?\n\n\t   [ Y / N ]?";
+        chomp($key = <STDIN>);  ## no critic 'ProhibitExplicitStdin'
+    } 
+    if ($key eq 'y' || $key eq 'Y' || $force)
+    {
+        print "\n-----Executing-----\n\n";
 
         chdir($dir);    # Work from GameData
 
