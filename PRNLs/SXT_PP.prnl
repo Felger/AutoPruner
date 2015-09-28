@@ -1,3 +1,5 @@
+SXT/Parts/Command/Kossak/Adaptor2.cfg
+SXT/Parts/Command/Kossak/adaptor2.mu
 SXT/Parts/Hull/Barrel
 SXT/Parts/Hull/fuselage/partSmall.cfg
 SXT/Parts/Hull/fuselage/small.mu
@@ -22,3 +24,9 @@ SXT/Parts/SaturnV/5mTank2.cfg
 SXT/Parts/SaturnV/Stage2.mu
 SXT/Parts/SaturnV/5mTank3.cfg
 SXT/Parts/SaturnV/Stage1.mu
+SXT/Parts/SaturnV/Stage1-2.cfg
+SXT/Parts/SaturnV/Stage1-2Sep.mu
+SXT/Parts/SaturnV/Stage1-2Small.cfg
+SXT/Parts/SaturnV/Stage1-2SepSmall.mu
+SXT/Parts/SaturnV/Stage2Adapt.cfg
+SXT/Parts/SaturnV/Stage2Adapt.mu

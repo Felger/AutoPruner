@@ -1,0 +1,63 @@
+VenStockRevamp/Part Bin/CryoXBigTank.cfg
+VenStockRevamp/Part Bin/CryoXMedTank.cfg
+VenStockRevamp/Part Bin/CryoXNosecone.cfg
+VenStockRevamp/Part Bin/CryoXSmallTank.cfg
+VenStockRevamp/Part Bin/CryoXTankButt.cfg
+VenStockRevamp/Squad/Parts/Aero/standardNoseCone.mu
+VenStockRevamp/Squad/Parts/Aero/NoseConeAdapter.mu
+VenStockRevamp/Squad/Parts/Aero/Nosecone.mu
+VenStockRevamp/Squad/Parts/Aero/LargeNosecone.mu
+VenStockRevamp/Squad/Parts/Aero/TallNoseCone.mu
+VenStockRevamp/Squad/Parts/Decouplers/RockomaxDecoupler.mu
+VenStockRevamp/Squad/Parts/Decouplers/RockomaxDecouplerB.mu
+VenStockRevamp/Squad/Parts/Decouplers/TR-18A.mu
+VenStockRevamp/Squad/Parts/Decouplers/TR-18D.mu
+VenStockRevamp/Squad/Parts/Decouplers/TR-XL.mu
+VenStockRevamp/Squad/Parts/Electrical/Batteries/model.mu
+VenStockRevamp/Squad/Parts/Electrical/Batteries/model200.mu
+VenStockRevamp/Squad/Parts/Electrical/Batteries/model1k.mu
+VenStockRevamp/Squad/Parts/Heatshields
+VenStockRevamp/Squad/Parts/Propulsion/1.25mTanks_Clr.dds
+VenStockRevamp/Squad/Parts/Propulsion/1.25mTanks_NRM.dds
+VenStockRevamp/Squad/Parts/Propulsion/CryoBig.mu
+VenStockRevamp/Squad/Parts/Propulsion/CryoCap.mu
+VenStockRevamp/Squad/Parts/Propulsion/CryoEnd.mu
+VenStockRevamp/Squad/Parts/Propulsion/CryoMed.mu
+VenStockRevamp/Squad/Parts/Propulsion/CryoSmall.mu
+VenStockRevamp/Squad/Parts/Propulsion/CryoTanks_CLR.dds
+VenStockRevamp/Squad/Parts/Propulsion/CryoTanks_NRM.dds
+VenStockRevamp/Squad/Parts/Propulsion/Decoupler.mu
+VenStockRevamp/Squad/Parts/Propulsion/InlineXenon.mu
+VenStockRevamp/Squad/Parts/Propulsion/LargeXenon.mu
+VenStockRevamp/Squad/Parts/Propulsion/RCSTankR1.mu
+VenStockRevamp/Squad/Parts/Propulsion/RCSFuelTankR10.mu
+VenStockRevamp/Squad/Parts/Propulsion/RCSFuelTankR25.mu
+VenStockRevamp/Squad/Parts/Propulsion/S3TankAdapter
+VenStockRevamp/Squad/Parts/Propulsion/S3Tank1.mu
+VenStockRevamp/Squad/Parts/Propulsion/S3Tank1_2.mu
+VenStockRevamp/Squad/Parts/Propulsion/S3Tank2.mu
+VenStockRevamp/Squad/Parts/Propulsion/size3tanks_Clr 2.dds
+VenStockRevamp/Squad/Parts/Propulsion/size3tanks_NRM.dds
+VenStockRevamp/Squad/Parts/Propulsion/T100Tank.mu
+VenStockRevamp/Squad/Parts/Propulsion/T200Tank.mu
+VenStockRevamp/Squad/Parts/Propulsion/T400Tank.mu
+VenStockRevamp/Squad/Parts/Propulsion/T800Tank.mu
+VenStockRevamp/Squad/Parts/Propulsion/X200-8.mu
+VenStockRevamp/Squad/Parts/Propulsion/X200-16.mu
+VenStockRevamp/Squad/Parts/Propulsion/X200-32.mu
+VenStockRevamp/Squad/Parts/Propulsion/X200-48.mu
+VenStockRevamp/Squad/Parts/Propulsion/X200-64.mu
+VenStockRevamp/Squad/Parts/SmallParts/SmallDecoupler.mu
+VenStockRevamp/Squad/Parts/SmallParts/SmallSeperator.mu
+VenStockRevamp/Squad/Parts/SmallParts/Decouplers_CLR.dds
+VenStockRevamp/Squad/Parts/SmallParts/Decouplers_NRM.dds
+VenStockRevamp/Squad/Parts/SmallParts/fuelTankOscarB.mu
+VenStockRevamp/Squad/Parts/SmallParts/fuelTankOscarD.mu
+VenStockRevamp/Squad/Parts/SmallParts/fuelTankOscarE.mu
+VenStockRevamp/Squad/Parts/SmallParts/SmallTanks_Clr.dds
+VenStockRevamp/Squad/Parts/SmallParts/SmallTanks_NRM.dds
+VenStockRevamp/Squad/Parts/Structural/AdapterMini.mu
+VenStockRevamp/Squad/Parts/Structural/LargeAdapter.mu
+VenStockRevamp/Squad/Parts/Structural/LargeAdapter2.mu
+VenStockRevamp/Squad/Parts/Structural/LargeTallAdapter.dds
+VenStockRevamp/Squad/Parts/Structural/ShortAdapter.dds
