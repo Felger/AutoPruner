@@ -28,7 +28,8 @@ SXT/Parts/SaturnV/model001_NRM.dds
 SXT/Parts/SaturnV/Stage3.mu
 SXT/Parts/SaturnV/Stage3Upper.mu
 SXT/Parts/Utility/capsuleHat
-SXT/Parts/Utility/floats
+SXT/Parts/Utility/floats/partMidSmall.cfg
+SXT/Parts/Utility/floats/partSmall.cfg
 SXT/Parts/Utility/smallPipes/GirderSet
 SXT/Parts/Utility/smallPipes/long.cfg
 SXT/Parts/Utility/smallPipes/long.mu
